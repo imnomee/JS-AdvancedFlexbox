@@ -232,6 +232,11 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		padding: 1.5rem 3rem;
+
+		@media only screen and (max-width: $bp-small) {
+			font-size: 1.8rem;
+			padding: 1rem 2rem;
+		}
 	}
 	&__stars {
 		// flex: 1;
@@ -262,15 +267,27 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+
+		@media only screen and (max-width: $bp-small) {
+			padding: 0 1rem;
+		}
 	}
 	&__rating-average {
 		font-size: 2.25rem;
 		font-weight: 300;
+
+		@media only screen and (max-width: $bp-small) {
+			font-size: 1.8rem;
+		}
 	}
 	&__rating-count {
 		font-size: 0.8rem;
 		text-transform: uppercase;
 		margin-top: -0.3rem;
+
+		@media only screen and (max-width: $bp-small) {
+			font-size: 0.5rem;
+		}
 	}
 }
 
@@ -513,9 +530,14 @@
 	@media only screen and (max-width: $bp-medium) {
 		padding: 2rem 0;
 	}
+
 	&__book-now {
 		font-size: 2.5rem;
 		text-transform: uppercase;
 		font-weight: 300;
+		@media only screen and (max-width: $bp-small) {
+			font-size: 1.8rem;
+			margin-bottom: 1rem;
+		}
 	}
 }
