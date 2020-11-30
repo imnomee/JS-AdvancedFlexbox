@@ -437,16 +437,19 @@
 		width: 1rem;
 		margin-right: 0.7rem;
 
-		//Older browsers
-		// background-image: url("../img/chevron-thin-right.svg");
-		// background-size: cover;
+		//Older browsers will automatically pic this image
+		background-image: url("../img/chevron-thin-right.svg");
+		background-size: cover;
 
-		//Newer browsers - Masks
-		background-color: var(--color-primary);
-		-webkit-mask-image: url("../img/chevron-thin-right.svg");
-		-webkit-mask-size: cover;
-		mask-image: url("../img/chevron-thin-right.svg");
-		mask-size: cover;
+		//Newer browsers - Masks if newer browser support feature, they will use it
+		@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+			background-color: var(--color-primary);
+			-webkit-mask-image: url("../img/chevron-thin-right.svg");
+			-webkit-mask-size: cover;
+			mask-image: url("../img/chevron-thin-right.svg");
+			mask-size: cover;
+			background-image: none; //remove the older browser image
+		}
 	}
 }
 
