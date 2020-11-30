@@ -11,6 +11,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media only screen and (max-width: $bp-smallest) {
+		order: 1;
+		flex: 0 0 100%;
+		background-color: var(--color-grey-light-2);
+	}
 	&__input {
 		font-family: inherit;
 		font-size: inherit;
@@ -27,6 +33,9 @@
 			outline: none;
 			width: 100%;
 			background-color: var(--color-grey-light-3);
+			@media only screen and (max-width: $bp-smallest) {
+				width: 90%;
+			}
 		}
 
 		&::-webkit-input-placeholder {
@@ -176,7 +185,14 @@
 
 		@media only screen and (max-width: $bp-small) {
 			flex-direction: column;
-			align-items: space-between;
+			// align-items: space-between;
+		}
+
+		@media only screen and (max-width: $bp-smallest) {
+			font-size: 1.5rem;
+			text-align: center;
+			flex-direction: column;
+			padding: 1rem 0.3rem;
 		}
 	}
 	&__icon {
@@ -270,6 +286,10 @@
 
 		@media only screen and (max-width: $bp-small) {
 			padding: 0 1rem;
+		}
+		@media only screen and (max-width: $bp-smallest) {
+			font-size: 1.5rem;
+			margin-left: 1rem;
 		}
 	}
 	&__rating-average {
